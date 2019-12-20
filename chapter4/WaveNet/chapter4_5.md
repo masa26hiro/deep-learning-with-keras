@@ -31,15 +31,15 @@
 
 ## 学習方法
 
-- Casual Convolution
+- Causal Convolution
 
 	現在とそれ以前の入力を対象とした畳み込み		
-	![Casual Convolution](./images/naive_conv.png)
+	![Causal Convolution](./images/naive_conv.png)
 
-- Dilated Casual Convolution
+- Dilated Causal Convolution
 
 	一定の幅を空けたノードを対象とした畳み込みで、層が深くなるにつれて指数関数的に幅が増える  
-	![Dilated Casual Convolution](./images/dilated_conv.png)
+	![Dilated Convolution](./images/dilated_conv.png)
 
 ## WaveNetの構造
 
