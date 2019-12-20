@@ -50,3 +50,7 @@
   fragment_length = 1152, nb_output_bins=256
 
 - Residual blockを繰り返すことで構築されている
+	1. Dilated Convolutionの出力をシグモイド関数とtanh関数にかける
+	1. それぞれの結果の要素積を計算する
+	1. 1 * 1の畳み込み
+	1. Dilated Convolutionする前のデータと合算する
