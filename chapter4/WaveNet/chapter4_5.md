@@ -46,10 +46,18 @@
 - ネットワーク
 	![WaveNet Network](./images/wavenet_network.png)
 
+	1. Causal Convolution
+	1. Residual Block * 複数
+	1. 全Residual Blockの結果を合算してReLU関数に渡す
+	1. 1 * 1の畳み込み
+	1. ReLU関数に渡す
+	1. 1 * 1の畳み込み
+	1. Softmax関数に渡して出力
+
 - 入力された音声を長さ1152、値範囲256に分割する  
   fragment_length = 1152, nb_output_bins=256
 
-- Residual blockを繰り返すことで構築されている
+- Residual Blockを繰り返すことで構築されている
 	1. Dilated Convolutionの出力をシグモイド関数とtanh関数にかける
 	1. それぞれの結果の要素積を計算する
 	1. 1 * 1の畳み込み
